@@ -59,7 +59,7 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['localhost', 'golfmsapi.herokuapp.com']
 
@@ -141,7 +141,7 @@ WSGI_APPLICATION = 'golfapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DEV' in os.environ:
+if  'DEV' in os.environ:
     DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.sqlite3',
