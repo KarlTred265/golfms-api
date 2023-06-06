@@ -140,7 +140,7 @@ WSGI_APPLICATION = 'golfapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DEBUG 'DEV' in os.environ:
+if 'DEV' in os.environ:
     DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.sqlite3',
